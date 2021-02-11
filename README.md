@@ -1,3 +1,6 @@
+
+just random translation credits to original dev https://github.com/snow922841/
+
 # telegram_channel_downloader
 Telegram channel/group file download script
 
