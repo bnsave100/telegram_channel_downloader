@@ -1,11 +1,10 @@
 # telegram_channel_downloader
-Telegram 频道/群组 文件下载脚本
+Telegram channel/group file download script
 
-脚本需要python3环境，具体安装教程自行搜索。
+The script needs python3 environment,the specific installation tutorial to search for itself.
 
-测试环境  Ubuntu 18.04.5 LTS & Python 3.6.9
-
-**1. 前提**
+Test environment Ubuntu 18.04.5 LTS & Python 3.6.9
+**1. Premise**
  
  - ~~安装redis~~
  
@@ -14,45 +13,37 @@ Telegram 频道/群组 文件下载脚本
  
  - 从 https://my.telegram.org/apps 获取自己的Telegram API密钥。
 
- - 下载脚本
- ```
- git clone https://github.com/snow922841/telegram_channel_downloader.git
- ```
+- Download script
+```
+git clone https://github.com/snow922841/telegram_channel_downloader.git
+```
 
-**2. 使用**
+**2. Use**
 
- - 进入脚本目录
- ```
- cd telegram_channel_downloader
- ```
- - 安装依赖 
- 
- ```
- pip3 install -r requirements.txt
- ```
+- Go to the script directory
+```
+cd telegram_channel_downloader
+```
+- Install dependencies
 
- - 修改telegram_channel_downloader.py文件内的 api_id 和 api_hash 为你自己的
+```
+pip3 install -r requirements.txt
+```
 
- - 修改脚本内的频道名称、保存路径、 bot_token 、 admin_id 、 chat 等必填配置
- 
- - 鉴于网友需要上传GD，特添加了使用gclone自动上传到团队盘的功能，需要在配置区域设置。具体查看脚本内注释
-   
- - 运行  
- ```
- python3 tg_channel_downloader.py
- ```
- - 按照提示输入telegram绑定的手机号获取验证码并输入
- 
- - 配置完成后需要给bot发送 /start 频道的链接 0 才会正式开始运行脚本，否则无法启动 0代表开始下载消息的ID，可以自行修改。
- 
- - ~~给bot发送 /ping 如果回复 peng 表示脚本正在运行，但是是否在下载还需要自己判断~~
- 
- - ~~如果30分钟内未收到bot发送的下载消息可能脚本未下载或下载完成，可以重新发送 /start 继续下载 ~~（待优化）~~（已修复）~~
- 
- - ~~可以手动配置消息偏移 给bot 发送 ‘ /change 123 ’ 代表从第123条消息开始下载，请自行修改数字。~~
- 
- - ~~异步请求会受到telegram的限制，而且任务失败在redis缓存比较麻烦，等有办法解决后在提交代码~~
+- Modify telegram_channel_downloader.the api_id and api_hash inside the PY File are your own
 
+- Modify the required configuration of Channel Name, save path, bot_token, admin_id, chat, etc. in the script
+
+- In view of the user needs to upload GD,added the use of gclone automatically uploaded to the team disk function, you need to configure the regional settings.View the comments in the script specifically
+
+- Run
+```
+python3 tg_channel_downloader.py
+ ```
+ - Follow the prompts to enter the telegram bound phone number to get the verification code and enter
+
+- After the configuration is complete, you need to send a link to the bot /start Channel 0 to officially start running the script, otherwise you can not start 0 on behalf of the ID to start downloading the message, you can modify it yourself.
+ 
 <details>
   <summary>点击查看更新日志</summary>
  
